@@ -4,7 +4,7 @@
 #
 Name     : R-mapproj
 Version  : 1.2
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/mapproj_1.2-4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mapproj_1.2-4.tar.gz
 Summary  : Map Projections
@@ -30,9 +30,12 @@ lib components for the R-mapproj package.
 %setup -q -c -n mapproj
 
 %build
+export LANG=C
+export SOURCE_DATE_EPOCH=1484542685
 
 %install
 rm -rf %{buildroot}
+export SOURCE_DATE_EPOCH=1484542685
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -42,7 +45,7 @@ export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
-R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library mapproj
+R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library mapproj
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
 export LANG=C
