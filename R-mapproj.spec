@@ -4,7 +4,7 @@
 #
 Name     : R-mapproj
 Version  : 1.2.8
-Release  : 66
+Release  : 67
 URL      : https://cran.r-project.org/src/contrib/mapproj_1.2.8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mapproj_1.2.8.tar.gz
 Summary  : Map Projections
