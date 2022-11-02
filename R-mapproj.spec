@@ -4,7 +4,7 @@
 #
 Name     : R-mapproj
 Version  : 1.2.9
-Release  : 69
+Release  : 70
 URL      : https://cran.r-project.org/src/contrib/mapproj_1.2.9.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mapproj_1.2.9.tar.gz
 Summary  : Map Projections
